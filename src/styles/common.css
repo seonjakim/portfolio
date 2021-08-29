@@ -1,0 +1,32 @@
+/** css reset */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+nav,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  vertical-align: baseline;
+  font: inherit;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+/** css tokens */
+:root {
+}
