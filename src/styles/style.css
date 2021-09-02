@@ -1,7 +1,33 @@
 @import './common.css';
-
-.developer-info {
+.main-wrapper {
   width: 100vw;
+}
+.dark {
+  background-color: #333;
+  color: white;
+}
+.dark .grey-background {
+  background-color: #222;
+}
+.dark .day-night {
+  background-position: -17px -13px;
+}
+.day-night {
+  position: fixed;
+  top: 18px;
+  z-index: 1;
+  right: 3%;
+  width: 48px;
+  height: 24px;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  background-size: 170%;
+  background-position: -17px -46px;
+  background-repeat: no-repeat;
+  background-image: url(https://images.velog.io/images/seonja/post/b05a48b9-fec7-4ddd-bf0b-bc14964ca074/31121351.jpg);
+}
+.developer-info {
+  /* width: 100vw; */
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -25,14 +51,14 @@
 }
 
 .section {
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .content-wrapper {
-  width: 80vw;
+  width: 60vw;
   min-width: 400px;
 }
 .grid-section {
@@ -65,8 +91,16 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+.skills-icons-wrapper {
+  width: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0 0 0;
+}
 .btn-common {
-  width: 100%;
+  min-width: 150px;
   max-width: 200px;
   color: white;
   background-color: #549657;
@@ -74,6 +108,10 @@ img {
   padding: 6px 12px;
   cursor: pointer;
   border-radius: 4px;
+}
+
+.project-summary {
+  text-align: justify;
 }
 @media screen and (max-width: 960px) {
   .grid-section {

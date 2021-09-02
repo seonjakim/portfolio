@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContentWrapper = ({ eachProject }) => {
   const returnLibraryLists = eachProject.libraryList.map((el, idx) => (
-    <img key={idx} src={el} alt="" />
+    <img style={{ margin: '0 5px' }} key={idx} src={el} alt="" />
   ))
   return (
     <div className="content-wrapper">
@@ -17,8 +17,18 @@ const ContentWrapper = ({ eachProject }) => {
       </div>
       <div className="tech-area">
         <div className="tech-img-area">{returnLibraryLists}</div>
-        <button className="btn-common github">Visit Github</button>
-        <button className="btn-common">Open the site</button>
+        <a target="_blank" rel="noopener noreferrer" href={eachProject.github}>
+          <button className="btn-common github">Visit Github</button>
+        </a>
+        {eachProject.webpage && (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={eachProject.webpage}
+          >
+            <button className="btn-common">Open the site</button>
+          </a>
+        )}
       </div>
     </div>
   )
